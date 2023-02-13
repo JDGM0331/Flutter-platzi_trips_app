@@ -4,14 +4,42 @@ import 'package:flutter/material.dart';
 
 class DescriptionPlace extends StatelessWidget {
 
-  String descripcionDummy = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
+  String namePlace; 
+  int stars; 
+  String descriptionPlace;  
+
+  DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace); /* Esto es un constructor */
 
   @override
   Widget build(BuildContext context) {
     // ignore: todo
     // TODO: implement build
 
-    final star = Container(
+    final star_half = Container( /* Estrella bordeada */
+      margin: EdgeInsets.only(
+        top: 323.0, 
+        right: 3.0
+      ),
+      
+      child: Icon(
+        Icons.star_half, 
+        color: Color(0xFFf2C611),
+      )
+    );
+
+    final star_border = Container( /* Estrella bordeada */
+      margin: EdgeInsets.only(
+        top: 323.0, 
+        right: 3.0
+      ),
+      
+      child: Icon(
+        Icons.star_border, 
+        color: Color(0xFFf2C611),
+      )
+    );
+
+    final star = Container( /* Estrella llena */
       margin: EdgeInsets.only(
         top: 323.0, 
         right: 3.0
@@ -23,7 +51,7 @@ class DescriptionPlace extends StatelessWidget {
       )
     );
 
-    final tittle_stars = Row(
+    final tittle_stars = Row( /* Nombre del lugar y cantidad de estrellas */
       children: <Widget>[
         Container(
           margin: EdgeInsets.only(
@@ -32,7 +60,7 @@ class DescriptionPlace extends StatelessWidget {
             right: 20.0
           ),
           child: Text(
-            "Duwili Ella", 
+            namePlace, 
             style: TextStyle(
               fontSize: 30.0, 
               fontWeight: FontWeight.w900
@@ -47,7 +75,7 @@ class DescriptionPlace extends StatelessWidget {
             star,
             star,
             star,
-            star
+            star_half
           ],
         )
 
@@ -61,7 +89,7 @@ class DescriptionPlace extends StatelessWidget {
         right: 20.0
       ),
       child: new Text(
-        descripcionDummy, 
+        descriptionPlace, 
         style: const TextStyle(
           fontSize: 16.0, 
           fontWeight: FontWeight.bold, 
