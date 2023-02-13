@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'description_place.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,9 +31,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Hola Mundo Feliz"),
         ),
-        body: Center(
-          child: Text("Hola Mundo Platzi"),
-        ),
+        body: new DescriptionPlace(),
       )//home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
