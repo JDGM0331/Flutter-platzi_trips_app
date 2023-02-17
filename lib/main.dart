@@ -1,7 +1,7 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'description_place.dart';
+import 'review_list.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,7 +34,8 @@ class MyApp extends StatelessWidget {
           title: const Text("Hola Mundo Feliz"),
         ),
         // ignore: unnecessary_new
-        body: new DescriptionPlace("Bahamas", 4, descripcionDummy),
+        body: ReviewList(),
+        //body: new DescriptionPlace("Bahamas", 4, descripcionDummy),
       )//home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

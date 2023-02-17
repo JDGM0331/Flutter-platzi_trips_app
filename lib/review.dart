@@ -1,15 +1,15 @@
-// ignore_for_file: prefer_const_constructors, must_be_immutable
+// ignore_for_file: prefer_const_constructors, must_be_immutable, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart'; 
 
 class Review extends StatelessWidget {
 
-  String pathImage = "asset/img/avatar-9d3a3ad47bb31dfc0fa90e7208828734.jpg"; 
-  String name = "Varuna Yasas"; 
-  String details = "1 review 5 photos"; 
-  String comment = "There is an amazing place in Sri Lanka";
+  String pathImage; 
+  String name; 
+  String details; 
+  String comment;
 
-  Review({super.key}); 
+  Review(this.pathImage, this.name, this.details, this.comment); /* Esto es un constructor */
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class Review extends StatelessWidget {
       ),
 
       child: Text(
-        details,
+        comment,
         textAlign: TextAlign.left,
         style: TextStyle(
           fontFamily: "Lato", 
