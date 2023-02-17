@@ -1,7 +1,9 @@
-// ignore_for_file: must_be_immutable, prefer_const_constructors
+// ignore_for_file: must_be_immutable, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'review_list.dart';
+import 'package:platzi_trips_app/description_place.dart';
+import 'package:platzi_trips_app/review_list.dart';
+import 'gradient_back.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,11 +32,17 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Hola Mundo Feliz"),
+        body: Stack( /* Stack permite poner un elemento encima del otro */
+          children: <Widget>[
+            ListView(
+              children: <Widget>[
+                DescriptionPlace("Bahamas", 4, descripcionDummy),
+                ReviewList()                
+              ],
+            ),
+            GradientBack()
+          ],
         ),
-        // ignore: unnecessary_new
-        body: ReviewList(),
         //body: new DescriptionPlace("Bahamas", 4, descripcionDummy),
       )//home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
