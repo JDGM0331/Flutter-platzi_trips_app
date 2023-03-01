@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/description_place.dart';
 import 'package:platzi_trips_app/review_list.dart';
 import 'gradient_back.dart';
+import 'header_appbar.dart';
 
 void main() {
   runApp(MyApp());
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
                 ReviewList()                
               ],
             ),
-            GradientBack("Popular")
+            HeaderAppBar() // importación del header que contiene el fondo gradiente y la lista de imagenes
           ],
         ),
         //body: new DescriptionPlace("Bahamas", 4, descripcionDummy),
