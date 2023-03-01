@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
                 ReviewList()                
               ],
             ),
-            GradientBack()
+            GradientBack("Popular")
           ],
         ),
         //body: new DescriptionPlace("Bahamas", 4, descripcionDummy),

@@ -1,9 +1,11 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, must_be_immutable, use_key_in_widget_constructors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
 
 class GradientBack extends StatelessWidget {
-  const GradientBack({super.key});
+
+  String title = "Popular"; /* Título del navbar */
+  GradientBack(this.title); /* Constructor */
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +23,19 @@ class GradientBack extends StatelessWidget {
           tileMode: TileMode.clamp /* Establecer un color de relleno para respaldo */
         )
       ),
+
+      child: Text(  // Texto del navbar
+        title,
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 30.0, 
+          fontFamily: "Lato",
+          fontWeight: FontWeight.bold
+        ),
+      ),
+
+      alignment: Alignment(-0.9, -0.6), /* Alineación del texto con respecto al contenedor */
+
     );
   }
 }
