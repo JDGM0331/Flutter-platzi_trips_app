@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, non_constant_identifier_names, prefer_const_constructors_in_immutables, unused_local_variable, unnecessary_new, use_key_in_widget_constructors, must_be_immutable
 
 import 'package:flutter/material.dart'; 
+import 'button_purple.dart';
 
 class DescriptionPlace extends StatelessWidget {
 
@@ -101,9 +102,11 @@ class DescriptionPlace extends StatelessWidget {
     ); 
 
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start, // Alineación de los elementos al inicio de cada item
       children: [
         tittle_stars, 
-        description
+        description,
+        ButtonPurple("Navigate") // Importación del botón de navegación
       ],
     );
 
